@@ -78,7 +78,10 @@ class IdeaList {
       </h3>
       <p class="tag ${tagClass}">${idea.tag.toUpperCase()}</p>
       <p>
-        Posted on <span class="date">${idea.date}</span> by
+        Posted on <span class="date">${new Date(idea.date).toLocaleString(
+          'en-GB',
+          { timeZone: 'Europe/London' }
+        )}</span> by
         <span class="author">${idea.username}</span>
       </p>
     </div>
